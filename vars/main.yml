@@ -1,0 +1,5 @@
+---
+# Variables listed here are applicable to "setup" role
+
+remote_user: jenkins
+docker_group: docker
