@@ -1,6 +1,7 @@
 ---
 
-- include_tasks: docker.yml
+- include_tasks: 
+    name: docker.yml
 
 # Add "jenkins" to "docker" group
 - name: docker users 
