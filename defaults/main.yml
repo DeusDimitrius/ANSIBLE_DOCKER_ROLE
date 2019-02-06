@@ -11,6 +11,10 @@ docker_restart_handler_state: restarted
 # Used only for Ubuntu xenial
 docker_apt_repository: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
 
+# Docker Compose 
+docker_install_compose: true
+docker_compose_version: "1.22.0"
+docker_compose_path: /usr/local/bin/docker-compose
 
 # List of users who will be added to the docker group
 docker_users: [jenkins]
