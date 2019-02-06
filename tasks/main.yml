@@ -38,5 +38,12 @@
   apt:
     autoclean: yes
 
-- include_tasks: "users.yml"  
-  when: docker_users                                 
+#- include_tasks: "users.yml"  
+#  when: docker_users  
+
+- name: docker users
+  user:
+    name: "{{ item }}"
+    groups: docker
+    append: yes
+  with_items: "{{ docker_users }}"                               
