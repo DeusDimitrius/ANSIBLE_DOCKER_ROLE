@@ -38,4 +38,5 @@
   apt:
     autoclean: yes
 
-- include_tasks: "users.yml"                                   
+tasks:
+  - include_tasks: "users.yml"                                   
