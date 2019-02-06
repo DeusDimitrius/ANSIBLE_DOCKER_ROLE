@@ -30,9 +30,9 @@
 
 - name: Add Docker repository.
   apt_repository:
-    repo: "{{ docker_apt_repository }}"
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
     state: present
-  update_cache: yes
+    update_cache: yes
 
 - name: Remove useless apt packages from the cache
   apt:
