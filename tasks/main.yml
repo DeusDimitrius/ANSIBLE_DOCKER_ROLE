@@ -38,5 +38,5 @@
   apt:
     autoclean: yes
 
-tasks:
-  - include_tasks: "users.yml"                                   
+- include_tasks: "users.yml"  
+  when: docker_users                                 
