@@ -2,11 +2,4 @@
 
 tasks:
   - include_tasks: "docker.yml"
-
-# Add "jenkins" to "docker" group
-- name: docker users 
-  user:
-    name: "{{ item }}"
-    groups: docker
-    append: yes
-  with_items: "{{ docker_users }}"
+  - include_tasks: "users.yml"
