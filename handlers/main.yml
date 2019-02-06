@@ -1,8 +1,8 @@
 ---
 # This playbook contains common handlers that can be called in "setup" tasks
 
-- name: restart docker
-  service: "name=docker state={{ docker_restart_handler_state }}"
+#- name: restart docker
+#  service: "name=docker state={{ docker_restart_handler_state }}"
 
 # - name: restart docker
 #  become: true

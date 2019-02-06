@@ -1,20 +1,11 @@
 ---
-# This playbook contains all actions that will be run
 
-# sudo apt-get update
-- name: Update apt packages
-  apt:
-    update_cache: yes
-  tags:
-    - system
+- include_tasks: docker.yml
 
-# Import docker tasks
-- name: Import docker tasks
-  include_tasks: docker.yml
-
-# sudo apt-get autoclean
-- name: Remove useless apt packages from the cache
-  apt:
-    autoclean: yes
-  tags:
-    - system
+# Add "jenkins" to "docker" group
+- name: docker users 
+  user:
+    name: "{{ item }}"
+    groups: docker
+    append: yes
+  with_items: "{{ docker_users }}"

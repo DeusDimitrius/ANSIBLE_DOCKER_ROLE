@@ -1,5 +1,5 @@
 ---
-# Community Edition
+
 docker_package: "docker-ce"
 docker_package_state: present
 
@@ -8,13 +8,10 @@ docker_service_state: started
 docker_service_enabled: true
 docker_restart_handler_state: restarted
 
-# Compose options
-docker_compose: true
+# Used only for Debian/Ubuntu
+docker_apt_release_channel: stable
+docker_apt_repository: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ ansible_distribution_release }} {{ docker_apt_release_channel }}"
 
-# Only for Ubuntu
-docker_apt_repo: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution|lower }} {{ ansible_distribution_release }} stable {{ 'test' if ansible_distribution_release == 'bionic' else '' }}"
-docker_apt_repo_gpg_url: https://download.docker.com/linux/ubuntu/gpg
-docker_apt_ignore_key_error: true
 
 # List of users who will be added to the docker group
-docker_users: ['jenkins']
+docker_users: [jenkins]
