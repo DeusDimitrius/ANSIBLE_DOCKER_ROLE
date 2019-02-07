@@ -14,7 +14,7 @@ docker_apt_repository: "deb [arch=amd64] https://download.docker.com/linux/ubunt
 # Docker Compose 
 docker_install_compose: true
 docker_compose_version: "1.23.0"
-docker_compose_path: /usr/local/bin/docker-compose
+docker_compose_path: /usr/bin/docker-compose
 
 # List of users who will be added to the docker group
 docker_users: [jenkins]
