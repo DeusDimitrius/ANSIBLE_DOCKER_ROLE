@@ -1,7 +1,7 @@
 ---
 
 # If pip is not installd
-#- name: Package prerequisites for pymongo ansible module
+#- name: Packages
 #  apt:
 #    force_apt_get: yes
 #    name: ['python-pip', 'python-setuptools', 'python-virtualenv', 'python-dev', 'build-essential']
