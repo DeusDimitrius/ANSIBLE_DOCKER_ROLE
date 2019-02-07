@@ -8,10 +8,6 @@
       - docker-engine
     state: absent
 
-# Install docker using pip
-- pip:
-    name: docker==latest
-
 - name: Ensure dependencies are installed.
   apt:
     name:
@@ -20,6 +16,8 @@
       - curl
     state: latest
     install_recommends: no
+
+- include_tasks: "pip.yml"
 
 #- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
 #  apt:
