@@ -12,7 +12,7 @@ docker_restart_handler_state: restarted
 docker_apt_repository: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
 
 # Docker Compose 
-docker_install_compose: true
+docker_install_compose: false
 docker_compose_version: "1.23.0"
 docker_compose_path: /usr/locale/bin/docker-compose
 
