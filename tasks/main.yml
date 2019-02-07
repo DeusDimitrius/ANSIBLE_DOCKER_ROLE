@@ -14,11 +14,13 @@
       - apt-transport-https
       - ca-certificates
       - curl
-    state: present
+    state: latest
+    install_recommends: no
 
-- name: Update apt packages
+- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
   apt:
     update_cache: yes
+    cache_valid_time: 3600
 
 - name: Add Docker apt key.
   apt_key:
