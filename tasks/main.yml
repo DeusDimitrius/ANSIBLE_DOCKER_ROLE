@@ -45,6 +45,8 @@
 #    mode: 755
 
 - name: Remove useless apt packages from the cache
+  become: true
+  become_method: sudo
   apt:
     autoclean: yes
 
