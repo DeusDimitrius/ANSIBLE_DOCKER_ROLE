@@ -1,5 +1,14 @@
 ---
 
+# If pip is not installd
+#- name: Package prerequisites for pymongo ansible module
+#  apt:
+#    force_apt_get: yes
+#    name: ['python-pip', 'python-setuptools', 'python-virtualenv', 'python-dev', 'build-essential']
+#    install_recommends: yes
+#    state: present
+#  become: true
+
 # Upgrade pip
 - pip:
     name: pip
