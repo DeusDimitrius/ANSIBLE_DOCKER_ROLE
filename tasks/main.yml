@@ -43,12 +43,12 @@
 #    url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64
 #    dest: "{{ docker_compose_path }}"
 #    mode: 755
-
-- name: Remove useless apt packages from the cache
-  become: true
-  become_method: sudo
-  apt:
-    autoclean: yes
+#
+#- name: Remove useless apt packages from the cache
+#  become: true
+#  become_method: sudo
+#  apt:
+#    autoclean: yes
 
 - include_tasks: "users.yml"  
   when: docker_users                              
