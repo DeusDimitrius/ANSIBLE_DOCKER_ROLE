@@ -2,9 +2,11 @@
 
 # Add "jenkins" to "docker" group
 - name: docker users
+  become: true
+  become_method: sudo
   user:
     name: "{{ item }}"
     groups: docker
-    append: yes
+    append: true
   with_items: "{{ docker_users }}"
 ~                                   
