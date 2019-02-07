@@ -8,6 +8,10 @@
       - docker-engine
     state: absent
 
+# Install docker using pip
+- pip:
+    name: docker==latest
+
 - name: Ensure dependencies are installed.
   apt:
     name:
