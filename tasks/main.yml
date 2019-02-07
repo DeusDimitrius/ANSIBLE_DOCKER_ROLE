@@ -50,5 +50,12 @@
 #  apt:
 #    autoclean: yes
 
+- name: Ensure docker group is exist
+  become: true
+  become_method: sudo
+  group:
+    name: "docker"
+    state: present
+
 - include_tasks: "users.yml"  
   when: docker_users                              
