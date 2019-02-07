@@ -8,5 +8,4 @@
     name: "{{ item }}"
     groups: docker
     append: true
-  with_items: "{{ docker_users }}"
-~                                   
+  with_items: "{{ docker_users }}"                                   
