@@ -1,8 +1,10 @@
 ---
 
 # Upgrade pip
-- name upgrade pip
-  shell: pip install --upgrade pip
+- pip:
+    name: pip
+    # force upgrade
+    state: forcereinstall
 
 # Install docker using pip
 - pip:
