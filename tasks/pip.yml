@@ -18,9 +18,9 @@
     state: forcereinstall
 
 -name install docker using pip
-  become: true
-  become_method: sudo
-  pip:
-    name: docker
-    # force upgrade
-    state: forcereinstall
+ become: true
+ become_method: sudo
+ pip:
+   name: docker
+   # force upgrade
+   state: forcereinstall
