@@ -9,12 +9,18 @@
 #    state: present
 #  become: true
 
-- pip:
+- name: upgrade pip
+  become: true
+  become_method: sudo
+  pip:
    name: pip
    # force upgrade
    state: forcereinstall
 
-- pip:
+- name: upgrade pip
+  become: true
+  become_method: sudo
+  pip:
    name: docker
    # force upgrade
    state: forcereinstall
