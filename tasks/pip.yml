@@ -9,13 +9,13 @@
 #    state: present
 #  become: true
 
-- name: upgrade pip
-  become: true
-  become_method: sudo
-  pip:
-   name: pip
-   # force upgrade
-   state: forcereinstall
+#- name: upgrade pip
+#  become: true
+#  become_method: sudo
+#  pip:
+#   name: pip
+#   # force upgrade
+#   state: forcereinstall
 
 - name: upgrade pip
   become: true
