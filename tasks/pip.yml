@@ -9,14 +9,18 @@
 #    state: present
 #  become: true
 
-# Upgrade pip
-- pip:
+- name: Upgrade pip to latest vesion
+  become: true
+  become_method: sudo
+  pip:
     name: pip
     # force upgrade
     state: forcereinstall
 
-# Install docker using pip
-- pip:
+-name install docker using pip
+  become: true
+  become_method: sudo
+  pip:
     name: docker
     # force upgrade
     state: forcereinstall
